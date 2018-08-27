@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Gaddi Leasing</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <style>
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    <body style="padding: 0px; margin: 0px; " data-role="page">
+        <script type="text/javascript" src="cordova.js"></script> 
+        <div style="height:40px;z-index: 20px;" data-role="header">
+            <img style="height: 40px; width: 40px; float: left;" src="heart.png"/>
+            <h5 style="font: small-caption">GADDI</h5>
+            <img class="toggle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABsSURBVGhD7dahDYBAEETRlUgEAklQFIGkBVqgFmqhSW5y+hSG28l/yVer1k0AAP5yGTSreA3aVfOQLa9HToMmBQAArBwGjao5wrLFjO+t+sht0KIAAICV1aBBNUdYtpjxvVUfeQzaFAAAH0UUF7Er8aZ8NQQAAAAASUVORK5CYII=" onclick="toggle_sidebar()" style="position: fixed; right: 10px; top: 10px; height: 20px; width:20px;" />
+            <div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 200px; left: -200px; background-color: black; transition: all 0.5s ease-in-out;">
+                <img src="me.jpg" height="200" width="200"/>
+                <label style="color: rgb(241, 88, 33)">Milind Mathur</label><br>
+                <label style="color: white">My Account</label><br>
+                <label style="color: white">My Car</label><br>
+                <label style="color: white">Payments</label><br>
+                <label style="color: white">Shop Cars</label><br>
+                <label style="color: white">Promotions</label><br>
+                <label style="color: white">FAQ</label>
+                <hr>
+                <label style="color: white">Contact Us</label><br>
+                <label style="color: white">Sign Out</label>
+            </div>
+        </div>
+        <div class="ui-content">
+            <!-- <h3 style="text-align: center">Choose your Range</h3>
+            <input type="range" min="0" max="500"><br>
+            <input style="height: 50%; width: 50%;" type="search">
+            <button >Search</button> -->
+            <ul data-role="listview">
+                <img id="1" class="media-object" onclick="callAnothePage()" src="All.png"/>
+                <img id="1" class="media-object" src="Brands.png"/>
+                <img id="1" class="media-object" src="Green.png"/>
+                <img id="1" class="media-object" src="Luxury.png"/>
+                <img id="1" class="media-object" src="Special.png"/>
+                <img id="1" class="media-object" src="Truck.png"/>
+                <img id="1" class="media-object" src="Uber.png"/>
+                <img id="1" class="media-object" src="Dealer.png"/>
+            </ul>
+        </div>
+        
+        <!-- <div  class="ui-content">
+            <ul data-role="listview">
+                <img id="1" class="media-object" src="../All.png"/>
+                <li>All Cars</li>
+                <li>All Cars</li>
+                <li>All Cars</li>
+            </ul>
+        </div> -->
+    </body>
+    <script>
+            function toggle_sidebar()
+            {
+                var sidebar = document.getElementById("sidebar");
+                console.log(sidebar.style.left);
+                if(sidebar.style.left == "-200px")
+                {
+                    sidebar.style.left = "0px";
+                }
+                else
+                {
+                    sidebar.style.left = "-200px";
+                }
+            }
+            function callAnothePage()
+             {
+                window.location = "AllCars.html";
+             }
+        </script>
+</html>
